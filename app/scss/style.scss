@@ -1,0 +1,146 @@
+@import "_libs.scss";
+@import "../fonts/fonts.css";
+@import "_vars.scss";
+@import "_global.scss";
+
+.header {
+  padding: 12px 0px 8px 0px;
+
+  &__logo-and-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+      width: 35%;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      line-height: 19px;
+      font-weight: 600;
+      color: $color-font;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: #1a212f;
+        transition: all 0.3s linear;
+        margin-top: 2px;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+.intro {
+  background: url(../img/bg__intro.jpg) center no-repeat;
+  background-size: cover;
+  padding: 150px 0;
+  &__inner {
+    margin-left: 100px;
+  }
+  &__title-suptitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__title {
+    margin: 0px 0 15px 0;
+    font-size: 62px;
+    line-height: 73px;
+    font-family: $font-Rubik;
+  }
+  &__title-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+}
+.advantages {
+  padding: 140px 0;
+  background: #fffefd;
+  background-image: url(../img/bg-advantages.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 32%;
+    padding: 30px 54px 30px 30px;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    min-height: 320px;
+    margin-bottom: 20px;
+    background-color: #fff;
+
+    img {
+      margin-bottom: 35px;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 140%;
+      font-family: $font-Rubik;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 140%;
+    }
+  }
+}
+.rooms {
+  background: url(../img/bg__rooms.png) no-repeat left top;
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &-content {
+      background-color: #fff;
+      padding: 40px 117px 40px 100px;
+      position: relative;
+      left: -5%;
+      box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+      border-radius: 8px;
+    }
+
+    &-name-room {
+      font-family: $font-Rubik;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    &-feature {
+      li {
+        line-height: 19px;
+        margin-bottom: 20px;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          background-color: $color-dots;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
