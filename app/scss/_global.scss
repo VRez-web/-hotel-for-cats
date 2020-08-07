@@ -9,13 +9,16 @@ body {
   font-size: 16px;
   color: $color-font;
 }
+main{
+  background: #fffefd;
+}
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-p{
-    margin: 0;
+p {
+  margin: 0;
 }
 .container {
   max-width: 1170px;
@@ -27,10 +30,39 @@ p{
   background: none;
   border: none;
   cursor: pointer;
-  padding: 20px 30px 20px 30px;
+  padding: 7px 7px 7px 30px;
   background: #fffefd;
   box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
   border-radius: 25px;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s linear;
+  font-weight: 600;
+  svg {
+    width: 36px;
+    height: 36px;
+    background-color: $color-orange;
+    border-radius: 50%;
+    fill: #fff;
+    padding: 9px 7px 9px 8px;
+    transition: all 0.4s linear;
+    margin-left: 20px;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $color-orange;
+
+    svg {
+      fill: $color-orange;
+      background-color: #fff;
+    }
+  }
+
+  &.orange-btn {
+    background-color: $color-orange;
+    color: #fff;
+  }
 }
 .section__title {
   font-size: 36px;
@@ -39,4 +71,57 @@ p{
   margin-bottom: 70px;
   text-align: center;
   font-family: $font-Rubik;
+}
+
+// Стили под слайдер
+
+.slick-dots {
+  bottom: -115px;
+
+  li {
+    background-color: #e1e1e1;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+
+    &.slick-active {
+      background-color: $color-dots;
+    }
+  }
+
+  button::before {
+    display: none;
+  }
+}
+.slick-prev,
+.slick-next {
+  left: auto;
+  top: auto;
+  right: 25px;
+  bottom: -130px;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.25);
+  z-index: 2;
+  &::before {
+    content: "";
+  }
+
+  &:hover {
+    background: none;
+    color: #fff;
+  }
+}
+.slick-prev {
+  right: 70px;
+  background-image: url(../img/arrow-left.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.slick-next {
+  background-image: url(../img/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
