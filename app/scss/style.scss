@@ -68,9 +68,9 @@
 }
 .advantages {
   padding: 140px 0;
-  background-image: url(../img/bg-advantages.png);
+  background-image: url(../img/bg-paw.png);
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: 105% 0%;
 
   &__inner {
     display: flex;
@@ -141,7 +141,7 @@
           display: inline-block;
           width: 13px;
           height: 13px;
-          background-color: $color-dots;
+          background-color: $color-yellow;
           border-radius: 50%;
           margin-right: 8px;
         }
@@ -150,7 +150,25 @@
   }
 }
 .reviews {
-  margin-top: 150px;
+  padding-top: 150px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 250px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/bg-paw.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    height: 100%;
+    max-height: 300px;
+    right: -5%;
+    top: 0;
+    z-index: -1;
+    transform: rotate(-45deg);
+  }
 
   &__inner {
     display: flex;
@@ -198,3 +216,25 @@
     }
   }
 }
+.contacts {
+
+
+  &__inner { 
+    display: flex;
+    align-items: center;
+  }
+  &__content { 
+    width: 40%;
+    background-color: $color-yellow;
+    padding: 70px 111px 70px 200px;
+  }
+  .map { 
+    
+
+    iframe{
+      width: 60vw;
+      border: none;
+    }
+  }
+
+ }

@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: $color-font;
+  overflow-x: hidden;
 }
 main{
   background: #fffefd;
@@ -85,7 +86,7 @@ p {
     height: 12px;
 
     &.slick-active {
-      background-color: $color-dots;
+      background-color: $color-yellow;
     }
   }
 
@@ -109,10 +110,7 @@ p {
     content: "";
   }
 
-  &:hover {
-    background: none;
-    color: #fff;
-  }
+
 }
 .slick-prev {
   right: 70px;
