@@ -117,9 +117,22 @@ p {
   background-image: url(../img/arrow-left.png);
   background-repeat: no-repeat;
   background-position: center center;
+
+  &:hover{
+    background-image: url(../img/arrow-left.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+  }
 }
 .slick-next {
   background-image: url(../img/arrow-right.png);
   background-repeat: no-repeat;
   background-position: center center;
+
+  &:hover{
+    background-image: url(../img/arrow-right.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }

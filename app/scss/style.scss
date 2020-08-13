@@ -32,7 +32,7 @@
         width: 0%;
         height: 2px;
         background-color: #1a212f;
-        transition: all 0.3s linear;
+        transition: all .4s linear;
         margin-top: 2px;
       }
 
@@ -217,24 +217,43 @@
   }
 }
 .contacts {
-
-
-  &__inner { 
+  &__inner {
     display: flex;
     align-items: center;
   }
-  &__content { 
+  &__content {
     width: 40%;
     background-color: $color-yellow;
     padding: 70px 111px 70px 200px;
-  }
-  .map { 
-    
 
-    iframe{
+    .section__title {
+      margin-bottom: 50px;
+      text-align: start;
+    }
+  }
+  .map {
+    iframe {
       width: 60vw;
       border: none;
     }
   }
 
- }
+  &__address {
+    &-item {
+      margin-bottom: 35px;
+      &-title {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+      }
+
+      a{
+        text-decoration: none;
+        color:$color-font;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
