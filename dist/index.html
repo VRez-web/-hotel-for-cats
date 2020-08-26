@@ -32,10 +32,10 @@
           </div>
           <nav>
             <ul class="header__nav">
-              <li><a href="#">Почему мы?</a></li>
-              <li><a href="#">Номера</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Как нас найти</a></li>
+              <li><a href="#advantages" class="nav__link">Почему мы?</a></li>
+              <li><a href="#rooms" class="nav__link">Номера</a></li>
+              <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+              <li><a href="#contacts" class="nav__link">Как нас найти</a></li>
             </ul>
           </nav>
         </div>
@@ -59,7 +59,7 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="container">
           <h2 class="section__title">Почему мы?</h2>
           <div class="advantages__inner">
@@ -114,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="rooms">
+      <section class="rooms" id="rooms">
         <div class="container">
           <h2 class="section__title">Номера</h2>
           <div class="rooms__inner">
@@ -233,7 +233,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__inner">
           <div class="contacts__content">
             <h2 class="section__title">Как нас найти</h2>
@@ -292,11 +292,37 @@
               allowfullscreen="true"
               style="position: relative;"
             ></iframe>
+            <div class="map-mark">
+              <img src="./img/map-mark.png" alt="котейка">
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo-and-nav">
+          <div class="logo">
+            <a href="#">
+              <img src="./img/logo.png" alt="Логотип" />
+            </a>
+          </div>
+          <nav>
+            <ul class="footer__nav">
+              <li><a href="#advantages" class="nav__link">Почему мы?</a></li>
+              <li><a href="#rooms" class="nav__link">Номера</a></li>
+              <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+              <li><a href="#contacts" class="nav__link">Как нас найти</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__copyright">
+          <span>© 2019 Все права защищены</span><span>Политика конфиденциальности</span>
+        </div>
+      </div>
+    </footer>
     <script src="./js/libs.min.js"></script>
     <script src="./js/sliders.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
