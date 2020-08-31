@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Котейка-гостиница для котов и кошек</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo-and-nav">
+          <div class="logo">
+            <a href="#">
+              <img src="./img/logo.png" alt="Логотип" />
+            </a>
+          </div>
+          <nav>
+            <ul class="header__nav">
+              <li><a href="#advantages" class="nav__link">Почему мы?</a></li>
+              <li><a href="#rooms" class="nav__link">Номера</a></li>
+              <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+              <li><a href="#contacts" class="nav__link">Как нас найти</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="contacts" id="contacts">
+      <div class="contacts__inner">
+        <div class="contacts__content">
+          <h2 class="section__title">Как нас найти</h2>
+          <div class="contacts__address">
+            <div class="contacts__address-item">
+              <h5 class="contacts__address-item-title">Адрес</h5>
+              <p>
+                Санкт-Петербург,<br />
+                ул Большая Конюшенная, д 19
+              </p>
+            </div>
+            <div class="contacts__address-item">
+              <h5 class="contacts__address-item-title">Режим работы</h5>
+              <p>Ежедневно, с 9:00 до 20:00</p>
+            </div>
+            <div class="contacts__address-item">
+              <h5 class="contacts__address-item-title">Телефон</h5>
+              <a href="tel:8(800)333-55-99"> 8 (800) 333-55-99 </a>
+            </div>
+            <div class="contacts__address-item">
+              <h5 class="contacts__address-item-title">E-mail</h5>
+              <a href="mailto:info@cat-hotel.ru"> info@cat-hotel.ru </a>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <a
+            href="https://yandex.ru/maps/22/kaliningrad/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >Калининград</a
+          ><a
+            href="https://yandex.ru/maps/22/kaliningrad/?ll=30.323118%2C59.938635&utm_medium=mapframe&utm_source=maps&z=16.74"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Санкт‑Петербург — Яндекс.Карты</a
+          ><iframe
+            src="https://yandex.ru/map-widget/v1/-/CCQpjEsclC"
+            width="900"
+            height="400"
+            frameborder="1"
+            allowfullscreen="true"
+            style="position: relative"
+          ></iframe>
+          <div class="map-mark">
+            <img src="./img/map-mark.png" alt="котейка" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo-and-nav">
+          <div class="logo">
+            <a href="#">
+              <img src="./img/logo.png" alt="Логотип" />
+            </a>
+          </div>
+          <nav>
+            <ul class="footer__nav">
+              <li><a href="#advantages" class="nav__link">Почему мы?</a></li>
+              <li><a href="#rooms" class="nav__link">Номера</a></li>
+              <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+              <li><a href="#contacts" class="nav__link">Как нас найти</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__copyright">
+          <span>© 2019 Все права защищены</span
+          ><span>Политика конфиденциальности</span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

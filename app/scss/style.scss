@@ -263,6 +263,20 @@
         }
       }
     }
+    &-social{
+      display: flex;
+      align-items: center;
+
+      svg{
+        width: 32px;
+        height: 32px;
+        margin:0 20px;
+
+        &:first-child{
+          margin-left: 0;
+        }
+      }
+    }
   }
 }
 .footer {
