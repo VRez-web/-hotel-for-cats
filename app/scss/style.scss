@@ -3,6 +3,7 @@
 @import "_vars.scss";
 @import "_global.scss";
 
+// Первая страница(главная)
 .header {
   padding: 12px 0px 8px 0px;
 
@@ -24,14 +25,14 @@
       text-decoration: none;
       line-height: 19px;
       font-weight: 600;
-      color: $color-font;
+      color: $color-darkBlue;
 
       &::after {
         content: "";
         display: block;
         width: 0%;
         height: 2px;
-        background-color: #1a212f;
+        background-color: $color-darkBlue;
         transition: all 0.4s linear;
         margin-top: 2px;
       }
@@ -236,13 +237,13 @@
     iframe {
       width: 60vw;
       border: none;
-      height: 35rem;
+      height: 41rem;
     }
 
     &-mark {
       position: absolute;
       right: 47%;
-      top: 41%;
+      top: 43%;
     }
   }
 
@@ -256,29 +257,30 @@
 
       a {
         text-decoration: none;
-        color: $color-font;
+        color: $color-darkBlue;
 
         &:hover {
           text-decoration: underline;
         }
       }
     }
-    &-social{
+    &-social {
       display: flex;
       align-items: center;
 
-      svg{
+      svg {
         width: 32px;
         height: 32px;
-        margin:0 20px;
+        margin: 0 20px;
 
-        &:first-child{
+        &:first-child {
           margin-left: 0;
         }
       }
     }
   }
 }
+
 .footer {
   padding: 12px 0px 20px 0px;
 
@@ -300,14 +302,14 @@
       text-decoration: none;
       line-height: 19px;
       font-weight: 600;
-      color: $color-font;
+      color: $color-darkBlue;
 
       &::after {
         content: "";
         display: block;
         width: 0%;
         height: 2px;
-        background-color: #1a212f;
+        background-color: $color-darkBlue;
         transition: all 0.4s linear;
         margin-top: 2px;
       }
@@ -317,13 +319,121 @@
       }
     }
   }
-  &__copyright{
+  &__copyright {
     margin-top: 32px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
-    color:#8F8F8F;
+    color: #8f8f8f;
     lighting-color: 14px;
+  }
+}
+
+// Вторая страница(выбор комнат)
+.all__rooms {
+  padding: 70px 0 140px 0;
+
+  .section__title {
+    margin-bottom: 0;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &-main {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-list {
+    width: 60%;
+  }
+  &-filter {
+    &-item {
+      margin-bottom: 35px;
+      .input-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+          background: none;
+          outline: none;
+          border: 1px solid #e1e1e1;
+          max-width: 100px;
+          margin-right: 10px;
+          padding: 7px 5px;
+          color: $color-darkBlue;
+
+          &:nth-child(2) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .checkbox-group {
+        position: relative;
+        margin-bottom: 20px;
+        input {
+          appearance: none;
+          position: absolute;
+          outline: none;
+
+          &:checked + label::after {
+            opacity: 1;
+          }
+        }
+        label {
+          padding-left: 30px;
+          cursor: pointer;
+          &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 1px solid #e1e1e1;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+          }
+
+          &::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: url(../img/check.svg);
+            background-size: 14px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            opacity: 0;
+          }
+        }
+      }
+
+      &-title {
+        font-weight: 500;
+        line-height: 19px;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+  &-btn {
+    border: 2px solid $color-yellow;
+    border-radius: 25px;
+    padding: 16px 36px;
+    cursor: pointer;
+    font-weight: 600;
+    color:$color-darkBlue;
+    background: none;
   }
 }
