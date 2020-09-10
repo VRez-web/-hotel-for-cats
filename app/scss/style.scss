@@ -349,39 +349,69 @@
     justify-content: space-between;
   }
   &-list {
-    width: 70%;
-
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     &-item {
       border: 1px solid #e1e1e1;
       box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
       border-radius: 6px;
-      width: 33%;
+      width: 32%;
+      margin-bottom: 30px;
       img {
         max-width: 270px;
         width: 100%;
         display: block;
         height: auto;
       }
-      &-content{
-        padding: 25px 20px;
+      &-content {
+        padding: 25px 12px 25px 20px;
 
-        ul{
+        ul {
           font-size: 14px;
 
-          li{
+          li {
             margin-bottom: 15px;
-
-            &:last-child{
+            display: flex;
+            align-items: center;
+            &:last-child {
               margin-bottom: 25px;
+            }
+
+            span {
+              font-weight: 500;
+              font-size: 18px;
+              margin-left: 10px;
             }
           }
         }
+        svg {
+          width: 16px;
+          height: 16px;
+          margin-left: 12px;
+        }
       }
 
-      &-title{
+      &-title {
         font-family: $font-Rubik;
         font-weight: 500;
         margin-bottom: 20px;
+      }
+
+      .btn {
+        font-size: 14px;
+        width: 100%;
+        line-height: 17px;
+        justify-content: space-between;
+        padding: 7px 7px 7px 50px;
+        svg {
+          width: 36px;
+          height: 36px;
+          background: #fffefd;
+          fill: $color-orange;
+        }
       }
     }
   }
@@ -469,5 +499,29 @@
     font-weight: 600;
     color: $color-darkBlue;
     background: none;
+  }
+}
+.baner {
+  margin-bottom: 130px;
+
+  &__inner {
+    background: url(../img/baner.jpg) center no-repeat;
+    padding: 78px 0;
+  }
+
+  .section__title {
+    margin-bottom: 25px;
+    span {
+      margin-top: 15px;
+      font-size: 56px;
+      line-height: 66px;
+    }
+  }
+  .section__subtitle{
+    margin-bottom: 35px;
+  }
+  &__wrapper {
+    width: 28%;
+    margin-left: 250px;
   }
 }
