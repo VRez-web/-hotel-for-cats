@@ -360,11 +360,16 @@
       border-radius: 6px;
       width: 32%;
       margin-bottom: 30px;
+      transition: all .3s linear;
+      border-radius: 6px;
+      &:hover{
+        box-shadow: 3px 6px 68px 0px rgba(176,174,176,1);
+      }
       img {
-        max-width: 270px;
         width: 100%;
         display: block;
         height: auto;
+        border-radius: 6px 6px 0 0;
       }
       &-content {
         padding: 25px 12px 25px 20px;
@@ -413,6 +418,7 @@
           fill: $color-orange;
         }
       }
+     
     }
   }
   &-filter {
@@ -499,11 +505,17 @@
     font-weight: 600;
     color: $color-darkBlue;
     background: none;
+    transition: all .4s ease-in-out;
+    
+    &:hover{
+      background-color: $color-darkBlue;
+      border-color:$color-darkBlue;
+      color:#fff;
+    }
   }
 }
 .baner {
   margin-bottom: 130px;
-
   &__inner {
     background: url(../img/baner.jpg) center no-repeat;
     padding: 78px 0;

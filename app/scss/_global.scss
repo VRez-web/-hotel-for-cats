@@ -29,6 +29,7 @@ p {
 
 .btn {
   background: none;
+  outline: none;
   border: none;
   cursor: pointer;
   padding: 7px 7px 7px 30px;
@@ -117,7 +118,7 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
 
-  &:hover {
+  &:hover,&:focus {
     background-image: url(../img/arrow-left.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -128,7 +129,7 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
 
-  &:hover {
+  &:hover,&:focus  {
     background-image: url(../img/arrow-right.png);
     background-repeat: no-repeat;
     background-position: center center;
