@@ -148,6 +148,10 @@
         }
       }
     }
+    a{
+      width: 80%;
+      text-decoration: none;
+    }
   }
 }
 .reviews {
@@ -506,7 +510,7 @@
     color: $color-darkBlue;
     background: none;
     transition: all .4s ease-in-out;
-    
+    outline: none;
     &:hover{
       background-color: $color-darkBlue;
       border-color:$color-darkBlue;
