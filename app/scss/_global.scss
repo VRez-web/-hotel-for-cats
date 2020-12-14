@@ -40,31 +40,31 @@ p {
   align-items: center;
   transition: all 0.4s linear;
   font-weight: 600;
-  color:$color-darkBlue;
+  color: $color-darkBlue;
   svg {
     width: 36px;
     height: 36px;
     background-color: $color-orange;
     border-radius: 50%;
-    fill: #fff;
+    fill: $color-white;
     padding: 9px 7px 9px 8px;
     transition: all 0.4s linear;
     margin-left: 20px;
   }
 
   &:hover {
-    color: #fff;
+    color: $color-white;
     background-color: $color-orange;
 
     svg {
       fill: $color-orange;
-      background-color: #fff;
+      background-color: $color-white;
     }
   }
 
   &.orange-btn {
     background-color: $color-orange;
-    color: #fff;
+    color: $color-white;
   }
 }
 .section__title {
@@ -79,13 +79,14 @@ p {
 // Стили под слайдер
 
 .slick-dots {
-  bottom: -115px;
+  position: sticky;
 
   li {
     background-color: #e1e1e1;
     border-radius: 50%;
     width: 12px;
     height: 12px;
+    transition: all 0.3s linear;
 
     &.slick-active {
       background-color: $color-yellow;
@@ -96,43 +97,42 @@ p {
     display: none;
   }
 }
-.slick-prev,
-.slick-next {
-  left: auto;
-  top: auto;
-  right: 25px;
-  bottom: -130px;
-  background-color: #fff;
+.slick-arrow {
+  position: static;
+  background-color: $color-white;
   border-radius: 50%;
   width: 36px;
   height: 36px;
   box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.25);
-  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.3s linear;
+  transform:translate(0,0%);
   &::before {
     content: "";
   }
-}
-.slick-prev {
-  right: 70px;
-  background-image: url(../img/arrow-left.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  &:hover,&:focus {
-    background-image: url(../img/arrow-left.png);
+  &:hover,
+  &:focus {
+    background-color: $color-orange;
+    background-image: url(../img/arrow-left-white.png);
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+.slick-prev {
+  background-image: url(../img/arrow-left.png);
+  margin-right: 10px;
+  &:hover,
+  &:focus {
+    transform:translate(0,0%)  rotate(360deg) ;
   }
 }
 .slick-next {
   background-image: url(../img/arrow-right.png);
-  background-repeat: no-repeat;
-  background-position: center center;
 
-  &:hover,&:focus  {
-    background-image: url(../img/arrow-right.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+  &:hover,
+  &:focus {
+    transform: translate(0,0%) rotate(180deg) ;
   }
 }
 
@@ -152,7 +152,7 @@ p {
   position: relative;
 
   select {
-    background: #ffffff;
+    background: $color-white;
     box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
     border-radius: 25px;
     appearance: none;
@@ -164,8 +164,6 @@ p {
     line-height: 17px;
     color: $color-darkBlue;
     width: 100%;
-
-
   }
 
   &::after {
@@ -176,14 +174,13 @@ p {
     padding: 4px;
     transform: rotate(45deg);
     position: absolute;
-    top:35%;
+    top: 35%;
     right: 20px;
   }
-
 }
 
-.select{
-  background: #ffffff;
+.select {
+  background: $color-white;
   box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
   border-radius: 25px;
   outline: none;
@@ -203,11 +200,11 @@ p {
     padding: 4px;
     transform: rotate(45deg);
     position: absolute;
-    top:35%;
+    top: 35%;
     right: 20px;
   }
 
-  &__body{
+  &__body {
     position: absolute;
     top: 100%;
     left: 0;
@@ -216,19 +213,19 @@ p {
     display: none;
   }
 
-  &__item{
+  &__item {
     padding: 13px 20px 13px 20px;
-    background: #ffffff;
-    transition: all .4s ease-in-out;
-    &:hover{
+    background: $color-white;
+    transition: all 0.4s ease-in-out;
+    &:hover {
       background: $color-grey;
     }
   }
-  &:focus{
+  &:focus {
     border-radius: 5px;
     // outline-color: $color-darkBlue;
 
-    &::after{
+    &::after {
       transform: rotate(-135deg);
       top: 45%;
       border-color: $color-orange;
